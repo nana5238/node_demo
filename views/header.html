@@ -1,0 +1,17 @@
+<div>
+	<div class="page-header"  style="margin: 40px 50px 20px;overflow:hidden">
+  		<div class="col-md-8">
+  			<h1><%= title%></h1>
+  			<p>这是一个神奇的网站</p>
+  		</div>
+  		<div class="col-md-4">
+  			<% if( title == "后台录入"){ %>
+  				
+  				<a href="/admin/list"><button class="btn btn-primary pull-right" style="margin-top: 50px;">后台管理</button></a>
+			<% }else{%>
+				<a href="/admin"><button class="btn btn-primary pull-right" style="margin-top: 50px;">后台录入</button></a>	
+  			<% }%>	
+  		</div>
+
+	</div>
+</div>

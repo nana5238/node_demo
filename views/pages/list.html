@@ -1,0 +1,32 @@
+<%- layout('layout')%>
+<div class="container">
+	<table class="table table-bordered table-hove">
+		<thead>
+			<tr>
+				<th>电影名字</th>
+				<th>导演</th>
+				<th>国家</th>
+				<th>上映年份</th>
+				<th>录入时间</th>
+				<th>查看</th>
+				<th>更新</th>
+				<th>删除</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% movies.forEach(function(movie){ %>  
+			<tr>
+				<td><%= movie.title%></td>
+				<td><%= movie.doctor%></td>
+				<td><%= movie.country%></td>
+				<td><%= movie.year%></td>
+				<td><%= moment(movie.meta.createAt).format('YYYY-MM-DD HH:mm:ss')%></td>
+				<td><a href="/detail/<%= movie._id%>" target="_blank">查看</a></td>
+				<td><a href="/admin/updata/<%= movie._id%>">修改</a></td>
+				<td><button class="btn  btn-danger del" data-id="<%= movie._id%>">删除</button></td>
+			</tr>
+			<% }) %>  
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="/js/admin_list.js"></script>

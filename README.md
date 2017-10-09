@@ -13,10 +13,13 @@
 
 * app.js配置文件
 - 模板引擎配置 ，使用 ejs-mate
+
+```javascript
 var engine = require('ejs-mate');
 app.engine('html',engine);
 app.set('views',path.join(__dirname,'views'));
-app.set('view engine','html');
+app.set('view engine','html'); 
+```
 
 * models movie.js //配置数据库的连接
 
